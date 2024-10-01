@@ -11,7 +11,7 @@ const Trending = () => {
 
   return (
     <>
-      <div className="bg-[#D9D9D9]">
+      <div className="trending">
         <h1 className="text-4xl font-bold text-center p-4">
           Trending <span className="text-[#D51C75]">Products</span>
         </h1>
@@ -22,9 +22,9 @@ const Trending = () => {
           craftmanship.
         </p>
         <div className="buttons mx-auto p-2 font-semibold lg:w-1/2">
-          <button className="bg-[#fff] btn">New Product</button>
+          <button className=" btn">New Product</button>
           <button className="text-white bg-[#D51C75]">Features Product</button>
-          <button className="bg-[#fff] btn">Best Seller</button>
+          <button className=" btn">Best Seller</button>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:w-3/4 w-full mx-auto p-4 sm:p-6 md:p-8">
           {displayedProducts.map((product) => (
@@ -36,7 +36,7 @@ const Trending = () => {
                 alt="African artifact"
                 className="lg:h-52 h-64 w-full"
               />
-              <h3 className="text-[#000] font-semibold p-2">
+              <h3 className=" font-semibold p-2">
                 {handleTitle(product.attributes.productTitle)}
               </h3>
               <h4 className="text-[red] font-semibold p-2">

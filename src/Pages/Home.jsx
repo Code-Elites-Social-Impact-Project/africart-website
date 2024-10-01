@@ -1,15 +1,17 @@
 import Footer from "../components/footer/Footer";
 import HomeSection from "../components/HeroSection/Hero";
 import Trending from "../components/TrendingProducts/Trending";
+import Header from "../components/Header/Header";
 
 const Home = () => {
   return (
     <>
-    <HomeSection />
-    <Trending />
-    <Footer />
+      <Header />
+      <HomeSection />
+      <Trending />
+      <Footer />
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
