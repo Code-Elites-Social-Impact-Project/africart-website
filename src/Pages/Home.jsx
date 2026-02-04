@@ -3,6 +3,8 @@ import HomeSection from "../components/HeroSection/Hero";
 import Header from '../components/Header/Header'
 import Trending from "../components/trendingProducts/Trending";
 import Featured from "../components/featured/FeaturedSection";
+import ShopbyCategory from "../components/Category";
+import Badges from "../components/Badges";
 
 const Home = () => {
 
@@ -10,6 +12,8 @@ const Home = () => {
     <>
     <Header />
     <HomeSection />
+    <Badges />
+    <ShopbyCategory />
     <Trending />
     <Featured />
     <Footer />

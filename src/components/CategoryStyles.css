@@ -1,0 +1,10 @@
+.af-category-title {
+    text-align: center;
+    margin: 48px 0;
+}
+.af-categories {
+    /* display: flex;
+    justify-content: center; */
+    gap: 16px;
+    margin: 48px 0; 
+}
