@@ -60,13 +60,13 @@ const Footer = () => {
             </p>
           </div>
           <div className="text-white company lg:p-2 lg:m-2 ">
-            <h3 className="text-xl font-semibold p-2">Company</h3>
+            <h3 className="text-xl font-semibold p-2">For Artisans</h3>
             <ul className="">
               <li className="">
-                <Link to={"/about"}>About Us</Link>
+                <Link to={"/about"}>Become a seller</Link>
               </li>
-              <li>Online Order</li>
-              <li>Support</li>
+              <li>Seller Dashboard</li>
+              <li>Selling Tips</li>
               <li>
                 <Link to={"/contact"}>Contact Us</Link>
               </li>

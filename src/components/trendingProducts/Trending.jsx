@@ -47,7 +47,7 @@ const Trending = () => {
   return (
     <>
       <div>
-        <h1 className="text-xl font-bold text-center p-4">
+        <h1 className="text-3xl font-bold text-center p-4">
           Trending <span className="text-[#D51C75]">Products</span>
         </h1>
         <p className="lg:w-1/2 w-full text-center mx-auto p-2 text-base">
@@ -80,35 +80,39 @@ const Trending = () => {
             Best Sellers
           </button>
         </div>
-        {isLoading && <Spinner />}
+        {/* {isLoading && <Spinner />} */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:w-3/4 w-full mx-auto p-4 sm:p-6 md:p-8">
-          {newProducts.map((product) => (
-            <div key={product.id} className=" w-full p-2 each-product">
-              <img
-                src={product.attributes.productImage.data.map(
-                  (image) => image.attributes.url
-                )}
-                alt="African artifact"
-                className="lg:h-52 h-64 w-full"
-              />
-              <h3 className="text-[#000] font-semibold p-2">
-                {handleTitle(product.attributes.productTitle)}
-              </h3>
-              <h4 className="text-[red] font-semibold p-2">
-                UGX {convertNumber(product.attributes.price)}
-              </h4>
-              <div className="text-2xl text-[orange]">
-                {displayRating(product.attributes.rating)}
+          {newProducts.length !== 0 &&
+            newProducts.map((product) => (
+              <div key={product.id} className=" w-full p-2 each-product">
+                <img
+                  src={product.attributes.productImage.data.map(
+                    (image) => image.attributes.url
+                  )}
+                  alt="African artifact"
+                  className="lg:h-52 h-64 w-full"
+                />
+                <h3 className="text-[#000] font-semibold p-2">
+                  {handleTitle(product.attributes.productTitle)}
+                </h3>
+                <h4 className="text-[red] font-semibold p-2">
+                  UGX {convertNumber(product.attributes.price)}
+                </h4>
+                <div className="text-2xl text-[orange]">
+                  {displayRating(product.attributes.rating)}
+                </div>
+                <button
+                  className="bg-[#102262] text-white btn  m-2 font-semibold w-full text-center mx-auto hover:bg-[#000]"
+                  onClick={() => handleViewNextProduct(product.id)}
+                >
+                  View Product
+                </button>
               </div>
-              <button
-                className="bg-[#102262] text-white btn  m-2 font-semibold w-full text-center mx-auto hover:bg-[#000]"
-                onClick={() => handleViewNextProduct(product.id)}
-              >
-                View Product
-              </button>
-            </div>
-          ))}
+            ))}
         </div>
+        {!newProducts.length && (
+          <p className="text-center">No products found</p>
+        )}
       </div>
     </>
   );
